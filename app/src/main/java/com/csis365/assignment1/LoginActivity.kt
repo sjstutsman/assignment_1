@@ -28,7 +28,9 @@ class LoginActivity : AppCompatActivity() {
             val UserName = etUsername
             val Password = etPassword
 
-            val intent = Intent(this, fruitActivaty::class.java)
+            val welcomeNote = "Welcome + ${UserName.toString()}"
+
+            val intent = Intent(this, FruitActivity::class.java)
         }
     }
 }
