@@ -15,12 +15,20 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/et_username"
         android:hint="username" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/et_password"
         android:hint="password"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/btn_login"
+        android:text="LOGIN" />
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>
