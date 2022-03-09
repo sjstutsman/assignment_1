@@ -1,10 +1,10 @@
 package com.csis365.assignment1
 
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import android.util.Log
 import android.content.SharedPreferences
-import android.content.SharedPreferences.Editor
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -16,15 +16,13 @@ class LoginActivity : AppCompatActivity() {
     }
 
     val prefs : SharedPreferences = getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE)
-    with(prefs.edit())
-    {
-        putString(keyFirstName, "Andrew")
-        commit()
-    }
+    val editor : SharedPreferences.Editor = prefs.edit()
+    editor.putString(keyFirstName, "Andrew").commit()
+
 
     val prefs2 = getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE)
     val firstName = prefs2.getString(keyFirstName, "default value")
 
-    Log.d("tag", firstName.toString())
+    Log.i("tag", firstName)
 
 }
