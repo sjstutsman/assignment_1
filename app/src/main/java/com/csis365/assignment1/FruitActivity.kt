@@ -25,7 +25,7 @@ class FruitActivity : AppCompatActivity() {
 
 
         val fruitService = buildService()
-        fruitService.getAllFruit().enqueue(object : Callback<List<Fruit>> {
+        fruitService.getFruitAll().enqueue(object : Callback<List<Fruit>> {
             override fun onResponse(call: Call<List<Fruit>>, response: Response<List<Fruit>>) {
                 Log.i("asdf", "onResponse()")
             }
@@ -33,8 +33,8 @@ class FruitActivity : AppCompatActivity() {
                 Log.i("asdf", "dog was unable to be summoned")
             }
         })
-        rvFruitList.adapter = MyItemAdapter(
-            fruitService.getAllFruit()
+        rvFruitList.adapter = FruitDetailAdapter(
+            fruitService.getFruitAll()
         )
 
     }

@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.csis365.assignment1.service.dto.Fruit
 import retrofit2.Call
 
-class MyItemAdapter(val data: Call<List<Fruit>>) : RecyclerView.Adapter<MyItemAdapter.MyViewHolder>() {
+class FruitListAdapter(val data: Call<List<Fruit>>) : RecyclerView.Adapter<FruitListAdapter.MyViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.view_fruit_detail, parent, false)
@@ -16,7 +16,7 @@ class MyItemAdapter(val data: Call<List<Fruit>>) : RecyclerView.Adapter<MyItemAd
         return MyViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: MyItemAdapter.MyViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: FruitListAdapter.MyViewHolder, position: Int) {
         //holder.textView.text = data[position].name
     }
 
@@ -33,4 +33,3 @@ class MyItemAdapter(val data: Call<List<Fruit>>) : RecyclerView.Adapter<MyItemAd
         }
     }
 }
-
