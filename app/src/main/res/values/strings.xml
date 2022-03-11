@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Assignment1</string>
+    <string name="username_size_error">Error: minimum username length is 4 characters</string>
+    <string name="login_error">Error: username or password incorrect</string>
 </resources>

@@ -11,7 +11,7 @@ import retrofit2.Call
 class FruitListAdapter(val data: Call<List<Fruit>>) : RecyclerView.Adapter<FruitListAdapter.MyViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.view_fruit_detail, parent, false)
+            .inflate(R.layout.view_fruit_list, parent, false)
 
         return MyViewHolder(view)
     }
@@ -29,7 +29,7 @@ class FruitListAdapter(val data: Call<List<Fruit>>) : RecyclerView.Adapter<Fruit
         val textView: TextView
 
         init {
-            textView = view.findViewById(R.id.tv_fruit_detail)
+            textView = view.findViewById(R.id.tv_fruit_list)
         }
     }
 }

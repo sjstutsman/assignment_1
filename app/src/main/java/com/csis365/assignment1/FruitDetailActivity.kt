@@ -13,14 +13,14 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class FruitActivity : AppCompatActivity() {
+class FruitDetailActivity : AppCompatActivity() {
     private lateinit var rvFruitList: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        rvFruitList = findViewById(R.id.rv_fruitdetail)
+        rvFruitList = findViewById(R.id.rv_fruit_detail)
         rvFruitList.layoutManager = LinearLayoutManager(this)
 
 
@@ -30,7 +30,7 @@ class FruitActivity : AppCompatActivity() {
                 Log.i("asdf", "onResponse()")
             }
             override fun onFailure(call: Call<List<Fruit>>, t: Throwable){
-                Log.i("asdf", "dog was unable to be summoned")
+                Log.i("asdf", "FruitAPI call failed")
             }
         })
         rvFruitList.adapter = FruitDetailAdapter(
