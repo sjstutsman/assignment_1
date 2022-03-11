@@ -6,7 +6,7 @@ import android.os.Bundle
 class List : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_adapter)
+        setContentView(R.layout.activity_list)
         title ="Fruit List"
     }
 }
