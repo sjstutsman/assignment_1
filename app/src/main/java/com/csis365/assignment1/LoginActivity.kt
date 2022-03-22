@@ -38,7 +38,7 @@ class LoginActivity : AppCompatActivity() {
         btnLogin.setOnClickListener {
             Log.d("Login", "Button has been pressed.")
             Log.i("Login", "UserName is " + userName.text.toString())
-            Log.v("Login", "Password is ${password.text.toString()}")
+            Log.v("Login", "Password is ${password.text}")
 
             if (password.text.toString() == "1111"
                 && userName.length() > 4) {
