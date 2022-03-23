@@ -14,15 +14,14 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class FruitDetailActivity : AppCompatActivity() {
-    private lateinit var rvFruitList: RecyclerView
+    private lateinit var rvFruitDetail: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        rvFruitList = findViewById(R.id.rv_fruit_detail)
-        rvFruitList.layoutManager = LinearLayoutManager(this)
-
+        rvFruitDetail = findViewById(R.id.rv_fruit_detail)
+        rvFruitDetail.layoutManager = LinearLayoutManager(this)
 
         val fruitService = buildService()
         fruitService.getFruitAll().enqueue(object : Callback<List<Fruit>> {
@@ -33,7 +32,7 @@ class FruitDetailActivity : AppCompatActivity() {
                 Log.i("asdf", "FruitAPI call failed")
             }
         })
-        rvFruitList.adapter = FruitDetailAdapter(
+        rvFruitDetail.adapter = FruitDetailAdapter(
             fruitService.getFruitAll()
         )
 
