@@ -7,7 +7,6 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import android.widget.Toast
 import org.w3c.dom.Text
 
 class Login : AppCompatActivity() {
@@ -15,12 +14,11 @@ class Login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        title = "Login Page"
 
+        title = "Login Page"
         val loginButton = findViewById<Button>(R.id.login_btn)
         val username = findViewById<EditText>(R.id.username)
         val password = findViewById<EditText>(R.id.password)
-
 
         fun validateLogin(username: EditText, password: EditText) {
             loginButton.setOnClickListener {
@@ -33,11 +31,7 @@ class Login : AppCompatActivity() {
                 }
             }
         }
-
-
         validateLogin(username, password)
-
-
     }
 
 }

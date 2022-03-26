@@ -4,4 +4,6 @@
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="login_failed_please_try_again">Login failed, please try again!</string>
+    <string name="genus">genus</string>
+    <string name="order">order</string>
 </resources>

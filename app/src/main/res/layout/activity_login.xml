@@ -28,15 +28,10 @@
     <TextView
         android:id="@+id/error_message"
         android:visibility="invisible"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textColor="#FF0000"
         android:text="@string/login_failed_please_try_again"
         android:gravity="center"/>
-
-
-
-
-
 </LinearLayout>
