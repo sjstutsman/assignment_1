@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/pink"
+    >
+
+
+    <TextView
+        android:id="@+id/tv_FruitDetailName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Loading Name"
+        android:textSize="64dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tv_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Loading Order"
+        android:textSize="32dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tv_family"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Loading Family"
+        android:textSize="32dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tv_genus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Loading Genus"
+        android:textSize="32dp"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:id="@+id/ll_nutritions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Nutritions"
+            android:textSize="48dp"
+            android:textColor="@color/black"
+            android:layout_margin="16dp"/>
+
+        <TextView
+            android:id="@+id/tv_carbs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Loading Cards"
+            android:textSize="32dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_protein"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Loading Protein"
+            android:textSize="32dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_fat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Loading Fat"
+            android:textSize="32dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_calories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Loading Calories"
+            android:textSize="32dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_sugar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Loading Sugar"
+            android:textSize="32dp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="32dp"
+        android:text="Back" />
+
+</LinearLayout>
