@@ -1,5 +1,6 @@
 package com.csis365.assignment1
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -15,6 +16,9 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class FruitDetailActivity : AppCompatActivity() {
     private lateinit var rvFruitDetail: RecyclerView
+    val extras = getIntent().getExtras()
+    var fruitWanted: String? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,18 +27,31 @@ class FruitDetailActivity : AppCompatActivity() {
         rvFruitDetail = findViewById(R.id.rv_fruit_detail)
         rvFruitDetail.layoutManager = LinearLayoutManager(this)
 
+        if (extras != null){
+            fruitWanted = extras.getString("fruitWanted")
+        }
+
         val fruitService = buildService()
-        fruitService.getFruitAll().enqueue(object : Callback<List<Fruit>> {
-            override fun onResponse(call: Call<List<Fruit>>, response: Response<List<Fruit>>) {
-                Log.i("asdf", "onResponse()")
-            }
-            override fun onFailure(call: Call<List<Fruit>>, t: Throwable){
-                Log.i("asdf", "FruitAPI call failed")
-            }
-        })
-        rvFruitDetail.adapter = FruitDetailAdapter(
-            fruitService.getFruitAll()
-        )
+        if(fruitWanted != null) {
+            fruitService.getFruit(fruitWanted!!).enqueue(object : Callback<Fruit> {
+                override fun onResponse(call: Call<Fruit>, response: Response<Fruit>) {
+                    Log.i("asdf", "onResponse() in detail")
+
+                    val fruitdetailcall = response.body()
+
+                    fruitdetailcall?.let {
+                        rvFruitDetail.adapter = FruitDetailAdapter(it)
+                    }
+                }
+
+                override fun onFailure(call: Call<Fruit>, t: Throwable) {
+                    Log.i("asdf", "FruitAPI call failed in detail")
+                }
+            })
+        }
+
+
+
 
     }
 

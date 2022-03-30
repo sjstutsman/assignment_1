@@ -14,6 +14,6 @@ interface FruitService {
     fun getFruitAll(): Call<List<Fruit>>
 
     @GET("fruit/{id}")
-    fun getFruit(@Path("id") id:Int): Call<Fruit>
+    fun getFruit(@Path("id") id:String): Call<Fruit>
 
 }

@@ -1,5 +1,6 @@
 package com.csis365.assignment1
 
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -20,18 +21,19 @@ class FruitListAdapter(val data: List<Fruit>) : RecyclerView.Adapter<FruitListAd
 
     override fun onBindViewHolder(holder: FruitListAdapter.MyViewHolder, position: Int) {
         holder.textView.text = data[position].name
-        //Log.i("asdf","onBindViewHolder")
+        Log.i("asdf","onBindViewHolder")
     }
 
     override fun getItemCount(): Int {
         return data.size
     }
 
-    class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class MyViewHolder(view: View) : RecyclerView.ViewHolder(view){
         val textView: TextView
 
         init {
             textView = view.findViewById(R.id.tv_fruit_list)
         }
+
     }
 }
