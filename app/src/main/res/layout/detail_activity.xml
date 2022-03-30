@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <TextView
+        android:textSize="22dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fruitname"
+        android:text="tst"/>
+
+    <TextView
+        android:textSize="22dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fruitid"
+        android:text="tst"/>
+
+    <TextView
+        android:textSize="22dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fruitgenus"
+        android:text="tst"/>
+
+    <TextView
+        android:textSize="22dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fruitorder"
+        android:text="tst"/>
+
+    <TextView
+        android:textSize="22dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fruitfamily"
+        android:text="tst"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:textSize="22dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fruitcarbs"
+        android:text="tst"/>
+
+    <TextView
+        android:textSize="22dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fruitprotein"
+        android:text="tst"/>
+
+    <TextView
+        android:textSize="22dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fruitfat"
+        android:text="tst"/>
+
+    <TextView
+        android:textSize="22dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fruitcals"
+        android:text="tst"/>
+
+    <TextView
+        android:textSize="22dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fruitsugar"
+        android:text="tst"/>
+</LinearLayout>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:id="@+id/backButton"
+        android:text="back" />
+
+</LinearLayout>
