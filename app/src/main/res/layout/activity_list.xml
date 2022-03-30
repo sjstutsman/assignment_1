@@ -19,15 +19,13 @@
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:textSize="18sp"
-        android:text="@string/genus"
         android:id="@+id/genus"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:textSize="18sp"
-        android:text="@string/order"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="30dp"
         android:id="@+id/order"/>
 
 

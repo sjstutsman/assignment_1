@@ -20,9 +20,9 @@
         <activity
             android:name=".Details"
             android:exported="false"
-            android:parentActivityName=".List"/>
+            android:parentActivityName=".ListFruit"/>
         <activity
-            android:name=".List"
+            android:name=".ListFruit"
             android:exported="false" />
         <activity
             android:name=".Login"

@@ -1,17 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Details">
+    tools:context=".Details"
+    android:orientation="vertical">
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:padding="10dp"
+        android:layout_height="30dp"
         android:textSize="18sp"
-        android:id="@+id/genus"
-        tools:ignore="MissingConstraints">
-    </TextView>
+        android:id="@+id/carbohydrates"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="18sp"
+        android:id="@+id/protein"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="18sp"
+        android:id="@+id/fat"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="18sp"
+        android:id="@+id/calories"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="18sp"
+        android:id="@+id/sugar"/>
 
 </LinearLayout>
