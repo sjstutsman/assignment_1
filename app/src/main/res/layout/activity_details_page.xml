@@ -32,6 +32,13 @@
             app:cardCornerRadius="15dp">
 
             <TextView
+                android:id="@+id/genus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="identity"
+                android:textAlignment="center"
+/>
+            <TextView
                 android:id="@+id/details"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -51,6 +58,15 @@
             app:cardBackgroundColor="#eee"
             app:cardCornerRadius="15dp">
 
+
+            <TextView
+                android:id="@+id/nutrients"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nutritions"
+                android:textAlignment="center" />
+
             <TextView
                 android:id="@+id/nutrition_detail"
                 android:layout_width="match_parent"
@@ -58,7 +74,9 @@
                 android:gravity="center"
                 android:textAlignment="center"
                 android:textColor="#121212"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
 
         </androidx.cardview.widget.CardView>
 
