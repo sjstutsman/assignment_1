@@ -5,9 +5,9 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class FruitRetrofit {
     var juicyfit: Retrofit = retrofit2.Retrofit.Builder()
-        .baseUrl("https://www.fruityvice.com/")
+        .baseUrl("https://fruityvice.com/")
         .addConverterFactory(GsonConverterFactory.create())
-        .build();
+        .build()
 
     var service: FruityViceService = juicyfit.create(FruityViceService::class.java)
 

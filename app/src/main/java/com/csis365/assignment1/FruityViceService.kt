@@ -7,5 +7,5 @@ import retrofit2.http.Path
 
 interface FruityViceService {
     @GET("api/fruit/all")
-    fun listRepos(): Call<Fruit>
+    fun listRepos(): Call<List<Fruit>>
 }

@@ -1,6 +1,7 @@
 package com.csis365.assignment1
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
@@ -17,41 +18,32 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var loginPassword : EditText
     private lateinit var loginUsername : EditText
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
+        val intent = Intent(this@LoginActivity, ListFruitActivity::class.java)
         val prefs : SharedPreferences = getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE)
         val editor  = prefs.edit()
         if(prefs.getBoolean(keyAuthorization, false)) {
-
+            startActivity(intent)
         } else {
             editor.putBoolean(keyAuthorization, false).commit()
         }
         editor.putString(keyPassword, "password").commit()
 
-
-        val prefs2 = getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE)
-        val firstName = prefs2.getString(keyAuthorization, "default value")
-
         loginSubmit = findViewById(R.id.login_submit)
         loginUsername = findViewById(R.id.login_username)
         loginPassword = findViewById(R.id.login_password)
 
-        loginSubmit.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(p0: View?) {
-                val prefs = getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE)
-                val password = prefs2.getString(keyPassword, "default value")
-                if(loginPassword.text.toString() == password && loginUsername.text.isNotEmpty()){
-                    val editor = prefs.edit()
-                    editor.putBoolean(keyAuthorization, true)
-                }
+        loginSubmit.setOnClickListener {
+            val prefs = getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE)
+            val password = prefs.getString(keyPassword, "default value")
+            if (loginPassword.text.toString() == password && loginUsername.text.isNotEmpty()) {
+                val editor = prefs.edit()
+                editor.putBoolean(keyAuthorization, true).commit()
+                startActivity(intent)
             }
-
-        })
-
-
-
-        Log.i("tag", firstName.toString())
+        }
     }
 }
