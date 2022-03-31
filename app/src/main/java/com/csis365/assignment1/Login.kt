@@ -10,17 +10,21 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
+// Name: Jared Lanoue
+// My assignment definitely doesn't follow the ideal code organization and is a bit messy, but it
+// all works perfectly and should have all of the requirements for this assignment.
 
 class Login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        title = "Login Page"
+        title = "Fruityvice Login Page"
         val loginButton = findViewById<Button>(R.id.login_btn)
         val username = findViewById<EditText>(R.id.username)
         val password = findViewById<EditText>(R.id.password)
         val pref = getSharedPreferences("loginState", Context.MODE_PRIVATE)
+        val loginError = findViewById<TextView>(R.id.error_message)
 
         fun validateLogin(username: EditText, password: EditText) {
             loginButton.setOnClickListener {
@@ -31,16 +35,9 @@ class Login : AppCompatActivity() {
                     }
                     startActivity(Intent(this, ListFruit::class.java))
                 } else {
-                    val loginError = findViewById<TextView>(R.id.error_message)
                     loginError.visibility = View.VISIBLE
                 }
             }
-        }
-
-// Used to set sharedpreferences to false to get back to login page
-        with(pref.edit()){
-            putBoolean("loginState", false)
-            commit()
         }
 
         fun checkLogin(pref: SharedPreferences, username: EditText, password: EditText) {

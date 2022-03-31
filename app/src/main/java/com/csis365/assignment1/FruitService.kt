@@ -1,4 +1,4 @@
-package com.csis365.assignment1.Services
+package com.csis365.assignment1
 
 import com.csis365.assignment1.Services.Fruits
 import retrofit2.Call

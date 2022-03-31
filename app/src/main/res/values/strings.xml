@@ -6,4 +6,5 @@
     <string name="login_failed_please_try_again">Login failed, please try again!</string>
     <string name="genus">genus</string>
     <string name="order">order</string>
+    <string name="logout">Logout</string>
 </resources>

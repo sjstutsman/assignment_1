@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Assignment1">
         <service
-            android:name=".Services.FruitService"
+            android:name=".FruitService"
             android:enabled="true"
             android:exported="true"
             tools:ignore="Instantiatable" />

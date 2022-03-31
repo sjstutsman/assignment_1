@@ -17,14 +17,14 @@ class Details : AppCompatActivity() {
 
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
-        // Realized after I finished this that I should've just send the ID and used the api to get
-        // the info, but instead I sent everything through the intent. Hopefully that is okay.
-
         val carbTV: TextView = findViewById(R.id.carbohydrates)
         val proteinTV: TextView = findViewById(R.id.protein)
         val fatTV: TextView = findViewById(R.id.fat)
         val calTV: TextView = findViewById(R.id.calories)
         val sugarTV: TextView = findViewById(R.id.sugar)
+        val genusTV: TextView = findViewById(R.id.genus)
+        val familyTV: TextView = findViewById(R.id.family)
+        val orderTV: TextView = findViewById(R.id.order)
 
         val name = intent.getSerializableExtra("name")
         val carbohydrates = intent.getSerializableExtra("carb")
@@ -32,13 +32,24 @@ class Details : AppCompatActivity() {
         val fat = intent.getSerializableExtra("fat")
         val calories = intent.getSerializableExtra("cal")
         val sugar = intent.getSerializableExtra("sugar")
+        val genus = intent.getSerializableExtra("genus")
+        val family = intent.getSerializableExtra("family")
+        val order = intent.getSerializableExtra("order")
 
         // Setting the textviews and title to match the chosen fruit's contents
+
         title = "${name}'s Details"
-        carbTV.text = "Carbohydrates: ${carbohydrates}"
-        proteinTV.text = "Protein: ${protein}"
-        fatTV.text = "Fat: ${fat}"
-        calTV.text = "Calories: ${calories}"
-        sugarTV.text = "Sugar: ${sugar}"
+
+        genusTV.text = "Genus: $genus"
+        familyTV.text = "Family: $family"
+        orderTV.text = "Order: $order"
+
+        carbTV.text = "Carbohydrates: $carbohydrates"
+        proteinTV.text = "Protein: $protein"
+        fatTV.text = "Fat: $fat"
+        calTV.text = "Calories: $calories"
+        sugarTV.text = "Sugar: $sugar"
+
+
     }
 }

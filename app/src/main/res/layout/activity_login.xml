@@ -6,25 +6,34 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:layout_margin="10dp"
-    tools:context=".Login">
+    tools:context=".Login"
+    android:padding="10dp">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/logo"/>
+
     <EditText
         android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/username"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"/>
+
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"/>
+
     <Button
         android:id="@+id/login_btn"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:text="@string/login"
         android:layout_gravity="center"/>
+
     <TextView
         android:id="@+id/error_message"
         android:visibility="invisible"
@@ -34,4 +43,5 @@
         android:textColor="#FF0000"
         android:text="@string/login_failed_please_try_again"
         android:gravity="center"/>
+
 </LinearLayout>

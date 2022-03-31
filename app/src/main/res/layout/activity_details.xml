@@ -4,7 +4,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Details"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="18sp"
+        android:id="@+id/family"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="18sp"
+        android:id="@+id/genus"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/order"/>
 
     <TextView
         android:layout_width="match_parent"
