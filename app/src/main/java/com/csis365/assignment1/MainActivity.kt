@@ -11,6 +11,7 @@ import android.widget.EditText
 import android.widget.Toast
 import android.widget.Toast.LENGTH_SHORT
 import android.widget.Toast.makeText
+import androidx.appcompat.app.ActionBarDrawerToggle
 
 class MainActivity : AppCompatActivity() {
     private lateinit var username : EditText
@@ -19,9 +20,11 @@ class MainActivity : AppCompatActivity() {
     private lateinit var SharedPreferences : SharedPreferences
     private var loggedIn = false
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
         SharedPreferences = getSharedPreferences("SHARED", Context.MODE_PRIVATE)
         loggedIn = SharedPreferences.getBoolean("LOGGEDIN", false)

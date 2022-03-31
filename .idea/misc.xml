@@ -3,11 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/abuch/Desktop/Projects/assignment_1/app/src/main/res/layout/activity_details_page.xml" value="0.16822916666666668" />
+        <entry key="..\:/Users/abuch/Desktop/Projects/assignment_1/app/src/main/res/layout/activity_details_page.xml" value="0.2" />
         <entry key="..\:/Users/abuch/Desktop/Projects/assignment_1/app/src/main/res/layout/activity_fruit_home.xml" value="0.2" />
         <entry key="..\:/Users/abuch/Desktop/Projects/assignment_1/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/abuch/Desktop/Projects/assignment_1/app/src/main/res/layout/card.xml" value="0.264" />
         <entry key="..\:/Users/abuch/Desktop/Projects/assignment_1/app/src/main/res/layout/fruit_layout.xml" value="0.176" />
+        <entry key="..\:/Users/abuch/Desktop/Projects/assignment_1/app/src/main/res/layout/main_header.xml" value="0.11639492753623189" />
+        <entry key="..\:/Users/abuch/Desktop/Projects/assignment_1/app/src/main/res/menu/main_menu.xml" value="0.264" />
       </map>
     </option>
   </component>
