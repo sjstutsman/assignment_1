@@ -48,7 +48,9 @@
         android:textColor="#FFFFFF"
         android:textColorHint="#CCCCCC"
         android:hint="username"
-        android:layout_marginTop="95dp"/>
+        android:layout_marginTop="95dp"
+        android:inputType="text"/>
+
 
     <EditText
         android:id="@+id/et_password"
@@ -70,13 +72,12 @@
         android:text="Login" />
 
 
-    <TextView
-        android:id="@+id/rtrv_login"
+    <CheckBox
+        android:id="@+id/save_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="forgot username/password"
+        android:text="Remember Me"
         android:textColor="#6E52FC"
-        android:textStyle="italic"
         android:linksClickable="true"
         android:layout_gravity="center_horizontal"/>
 
