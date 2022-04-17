@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:layout_gravity="center_horizontal"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
+    tools:context=".view.LoginActivity"
     android:background="#1B222E">
 
     <FrameLayout

@@ -1,4 +1,4 @@
-package com.csis365.assignment1
+package com.csis365.assignment1.view
 
 import android.content.Context
 import android.content.Intent
@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.Toast
+import com.csis365.assignment1.R
 
 class LoginActivity : AppCompatActivity() {
 
@@ -20,11 +21,9 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var sharedPreferences: SharedPreferences
 
 
-    val MIN_USERNAME_LENGTH = 4
-    val REQUIRED_PASSWORD = "PASSWORD"
+    private val MIN_USERNAME_LENGTH = 4
+    private val REQUIRED_PASSWORD = "PASSWORD"
 
-    private lateinit var prefs: SharedPreferences
-//        getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,53 +45,34 @@ class LoginActivity : AppCompatActivity() {
         btnLogin.setOnClickListener {
             if (validateUserName()){
 
-                val UserName = etUsername!!.text.toString()
-                val Password = etPassword!!.text.toString()
+                val userName = etUsername.text.toString()
+                val password = etPassword.text.toString()
 
 
-//                val editor: SharedPreferences.Editor = prefs.edit()
-//                editor.putString("USERNAME", UserName).commit()
-//                editor.putString("Password", Password).commit()
-
-                if (cbSaveLogin.isChecked()){
+                if (cbSaveLogin.isChecked){
                     val editor: SharedPreferences.Editor = prefs.edit()
                     editor.putString(getString(R.string.checkbox), "True").apply()
-                    editor.putString("USERNAME", UserName).commit()
-                    editor.putString("Password", Password).commit()
+                    editor.putString("USERNAME", userName).apply()
+                    editor.putString("Password", password).apply()
 
-                    val name = prefs.getString("nam",UserName)!!
-                    val pass = prefs.getString("pswd",Password)!!
                     val intent = Intent(this, FruitListActivity::class.java)
-                    Toast.makeText(this,name + " okSaved " + pass,Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,"  username Saved ",Toast.LENGTH_SHORT).show()
                     startActivity(intent)
 
                 } else{
                     val editor: SharedPreferences.Editor = prefs.edit()
-                    editor.putString(getString(R.string.checkbox), "False").commit()
-                    editor.putString("USERNAME", "").commit()
-                    editor.putString("Password", "").commit()
+                    editor.putString(getString(R.string.checkbox), "False").apply()
+                    editor.putString("USERNAME", "").apply()
+                    editor.putString("Password", "").apply()
 
                     val intent = Intent(this, FruitListActivity::class.java)
                     startActivity(intent)
                 }
-
-                /*
-                val name = prefs.getString("nam",UserName)!!
-                val pass = prefs.getString("pswd",Password)!!
-
-                val intent = Intent(this, FruitActivity::class.java)
-
-                Toast.makeText(this,name + " okSaved " + pass,Toast.LENGTH_SHORT).show()
-
-                startActivity(intent)
-                */
-
-
             }
         }
     }
     // validating the userName
-    fun validateUserName(): Boolean{
+    private fun validateUserName(): Boolean{
         if (etUsername.length() < MIN_USERNAME_LENGTH){
             etUsername.error = "!Error -- more than 4 characters!"
 
@@ -112,29 +92,6 @@ class LoginActivity : AppCompatActivity() {
         etUsername.setText(strName)
         etPassword.setText(strPassword)
         cbSaveLogin.isChecked = strCheckBox == "True"
-
-        /*
-        strCheckBox = sharedPreferences.getString(getString(R.string.checkBox), "False").toString()
-        strName = sharedPreferences.getString(getString(R.string.name), "").toString()
-        strPassword = sharedPreferences.getString(getString(R.string.password), "").toString()
-        name.setText(strName)
-        password.setText(strPassword)
-        checkBox.isChecked = strCheckBox == "True"
-        //val CHECKBOX = cbSaveLogin!!.text.toString()
-
-//        val editor: SharedPreferences.Editor = prefs.edit()
-//        editor.putString("USERNAME", user).commit()
-//        editor.putString("Password", pass).commit()
-//        editor.putString("USERNAME", UserName).commit()
-//        editor.putString("Password", Password).commit()
-
-        val name = prefs.getString("nam",UserName)
-        val pass = prefs.getString("pswd",Password)
-
-        Toast.makeText(this,name + " okSaved " + pass,Toast.LENGTH_SHORT).show()
-        */
-
-
     }
 
 

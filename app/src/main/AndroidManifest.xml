@@ -13,16 +13,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Assignment1">
         <activity
-            android:name=".FruitDetail"
+            android:name=".view.FruitDetail"
             android:exported="true"
-            android:parentActivityName=".FruitListActivity">
+            android:parentActivityName=".view.FruitListActivity">
         </activity>
         <activity
-            android:name=".FruitListActivity"
+            android:name=".view.FruitListActivity"
             android:exported="true">
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".view.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

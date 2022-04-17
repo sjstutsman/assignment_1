@@ -4,15 +4,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="250dp"
+    android:layout_height="300dp"
     android:layout_margin="10dp"
     app:cardElevation="6dp"
     app:cardBackgroundColor="#6E52FC">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp">
-
+        android:layout_height="300dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -75,13 +74,64 @@
 
             <TextView
                 android:id="@+id/tv_nutritions"
-                android:textColor="#FBE7C6"
+                android:textColor="#B4F8C8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="5dp"
                 android:text="Nutritions"
                 android:textSize="14dp"/>
+
+            <TextView
+                android:id="@+id/tv_carbohydrates"
+                android:textColor="#B4F8C8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Carbohydrates"
+                android:textSize="14dp"/>
+
+            <TextView
+                android:id="@+id/tv_protein"
+                android:textColor="#B4F8C8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Protein"
+                android:textSize="14dp"/>
+
+            <TextView
+                android:id="@+id/tv_fat"
+                android:textColor="#B4F8C8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Fat"
+                android:textSize="14dp"/>
+
+            <TextView
+                android:id="@+id/tv_calories"
+                android:textColor="#B4F8C8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Calories"
+                android:textSize="14dp"/>
+
+            <TextView
+                android:id="@+id/tv_sugar"
+                android:textColor="#B4F8C8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Sugar"
+                android:textSize="14dp"/>
+
 
         </LinearLayout>
 
