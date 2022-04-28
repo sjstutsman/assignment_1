@@ -37,33 +37,32 @@ class LoginActivity : AppCompatActivity() {
         cbSaveLogin = findViewById(R.id.save_login)
 
 
-        val prefs: SharedPreferences =
+        sharedPreferences =
             getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE)
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
+        val getUsername = sharedPreferences.getString("strUserName","username")
+        val getPassword = sharedPreferences.getString("strPassword","password")
+        etUsername.setText(getUsername.toString())
+        etPassword.setText(getPassword.toString())
 
-        checkSP()
+
+
         btnLogin.setOnClickListener {
             if (validateUserName()){
 
-                val userName = etUsername.text.toString()
-                val password = etPassword.text.toString()
-
-
                 if (cbSaveLogin.isChecked){
-                    val editor: SharedPreferences.Editor = prefs.edit()
-                    editor.putString(getString(R.string.checkbox), "True").apply()
-                    editor.putString("USERNAME", userName).apply()
-                    editor.putString("Password", password).apply()
+                    val editor = sharedPreferences.edit()
+                    editor.putString("strUserName", etUsername.text.toString()).apply()
+                    editor.putString("strPassword", etPassword.text.toString()).apply()
+
 
                     val intent = Intent(this, FruitListActivity::class.java)
                     Toast.makeText(this,"  username Saved ",Toast.LENGTH_SHORT).show()
                     startActivity(intent)
 
                 } else{
-                    val editor: SharedPreferences.Editor = prefs.edit()
-                    editor.putString(getString(R.string.checkbox), "False").apply()
-                    editor.putString("USERNAME", "").apply()
-                    editor.putString("Password", "").apply()
+                    val editor = sharedPreferences.edit()
+                    editor.putString("strUserName", "").apply()
+                    editor.putString("strPassword", "").apply()
 
                     val intent = Intent(this, FruitListActivity::class.java)
                     startActivity(intent)
@@ -83,15 +82,6 @@ class LoginActivity : AppCompatActivity() {
             return false
         }
         return true
-    }
-
-    private fun checkSP() {
-        val strCheckBox = sharedPreferences.getString(getString(R.string.checkbox), "False").toString()
-        val strName = sharedPreferences.getString(getString(R.string.username), "").toString()
-        val strPassword = sharedPreferences.getString(getString(R.string.password), "").toString()
-        etUsername.setText(strName)
-        etPassword.setText(strPassword)
-        cbSaveLogin.isChecked = strCheckBox == "True"
     }
 
 
